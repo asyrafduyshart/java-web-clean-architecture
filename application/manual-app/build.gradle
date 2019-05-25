@@ -1,0 +1,11 @@
+apply plugin: 'java-library'
+
+ext.moduleName = 'asyraf.main'
+
+dependencies {
+	implementation(
+		project(':config'),
+		project(':domain'),
+		project(':usecase'),
+	)
+}

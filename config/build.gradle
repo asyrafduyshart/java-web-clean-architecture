@@ -1,0 +1,16 @@
+apply plugin: 'java-library'
+
+ext.moduleName = 'asyraf.example.config'
+
+dependencies {
+	implementation(
+		project(':usecase'),
+		project(':domain'),
+		project(':in-memory-db-simple'),
+		project(':in-memory-db-hazelcast'),
+		project(':jug'),
+		project(':uuid'),
+		project(':encoder-sha256'),
+		project(':controller'),
+	)
+}

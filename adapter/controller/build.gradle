@@ -1,0 +1,10 @@
+apply plugin: 'java-library'
+
+ext.moduleName = 'asyraf.example.controller'
+
+dependencies {
+	implementation(
+		project(':usecase'),
+		project(':domain'),
+	)
+}

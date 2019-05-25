@@ -1,0 +1,9 @@
+apply plugin: 'java-library'
+
+ext.moduleName = 'asyraf.example.uuid'
+
+dependencies {
+	implementation(
+		project(':usecase')
+	)
+}

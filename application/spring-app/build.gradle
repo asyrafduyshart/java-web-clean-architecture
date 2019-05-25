@@ -1,0 +1,24 @@
+buildscript {
+	repositories {
+		jcenter()
+	}
+	dependencies {
+		classpath "org.springframework.boot:spring-boot-gradle-plugin:2.0.2.RELEASE"
+	}
+}
+
+apply plugin: 'java-library'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+ext.moduleName = 'asyraf.example.spring'
+
+dependencies {
+	implementation(
+		project(':config'),
+		project(':usecase'),
+		project(':controller'),
+		'org.springframework.boot:spring-boot-starter-web',
+		'com.fasterxml.jackson.core:jackson-core:2.9.9',
+	)
+}
