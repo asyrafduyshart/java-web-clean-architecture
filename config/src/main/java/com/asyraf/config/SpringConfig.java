@@ -25,4 +25,8 @@ public class SpringConfig {
 	public LoginUser loginUser() {
 		return new LoginUser(userRepository, passwordEncoder);
 	}
+
+	public static String getData(){
+		return "Holla";
+	}
 }
