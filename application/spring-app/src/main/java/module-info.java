@@ -23,8 +23,10 @@ module asyraf.example.spring {
 	requires spring.data.redis;
 	requires spring.security.core;
 	requires spring.security.web;
+	requires asyraf.example.db.psql;
 
 	exports com.asyraf.example.spring;
 	exports com.asyraf.example.spring.config;
+
 	opens com.asyraf.example.spring.config to spring.core;
 }
