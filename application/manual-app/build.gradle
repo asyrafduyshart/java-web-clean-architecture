@@ -1,4 +1,5 @@
 apply plugin: 'java-library'
+apply plugin: 'application'
 
 ext.moduleName = 'asyraf.main'
 
@@ -9,3 +10,5 @@ dependencies {
 		project(':usecase'),
 	)
 }
+
+mainClassName = 'com.asyraf.example.manual.Main'

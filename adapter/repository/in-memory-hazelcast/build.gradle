@@ -6,6 +6,6 @@ dependencies {
 	implementation(
 		project(':domain'),
 		project(':usecase'),
-		'com.hazelcast:hazelcast:3.9.3',
+		'com.hazelcast:hazelcast:3.12',
 	)
 }

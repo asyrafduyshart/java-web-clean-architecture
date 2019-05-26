@@ -1,4 +1,4 @@
-package com.asyraf.example;
+package com.asyraf.example.manual;
 
 import com.asyraf.config.ManualConfig;
 import com.asyraf.example.domain.entity.User;
