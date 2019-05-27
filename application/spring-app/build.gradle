@@ -54,8 +54,9 @@ dependencies {
 	implementation(
 		project(':config'),
 		project(':usecase'),
+		project(':domain'),
 		project(':controller'),
-		project(':psql-spring'),
+		project(':psql-jpa'),
 		'org.springframework.boot:spring-boot-starter-web',
 		'com.fasterxml.jackson.core:jackson-core:2.9.9',
 	)

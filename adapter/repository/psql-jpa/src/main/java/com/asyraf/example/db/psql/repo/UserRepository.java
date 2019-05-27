@@ -9,5 +9,5 @@ import java.util.Optional;
  * @since JDK1.8
  */
 public interface UserRepository extends CustomRepository<UserPO, Long> {
-	Optional<UserPO> findByAccount(String account);
+	Optional<UserPO> findById(Long id);
 }

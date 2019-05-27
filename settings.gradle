@@ -7,7 +7,7 @@ include ':jug'
 include ':uuid'
 include ':in-memory-db-simple'
 include ':in-memory-db-hazelcast'
-include ':psql-spring'
+include ':psql-jpa'
 include ':encoder-sha256'
 include ':controller'
 
@@ -20,7 +20,7 @@ project(":jug").projectDir = file("adapter/id-generator/jug")
 project(":uuid").projectDir = file("adapter/id-generator/uuid")
 project(":in-memory-db-simple").projectDir = file("adapter/repository/in-memory-simple")
 project(":in-memory-db-hazelcast").projectDir = file("adapter/repository/in-memory-hazelcast")
-project(":psql-spring").projectDir = file("adapter/repository/psql-spring")
+project(":psql-jpa").projectDir = file("adapter/repository/psql-jpa")
 project(":controller").projectDir = file("adapter/controller")
 
 project(":manual-app").projectDir = file("application/manual-app")

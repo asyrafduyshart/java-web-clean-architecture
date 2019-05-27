@@ -6,25 +6,14 @@ import org.hibernate.annotations.Parameter;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EntityListeners;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
-import javax.persistence.NamedAttributeNode;
-import javax.persistence.NamedEntityGraph;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Version;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
-import lombok.ToString;
-
-import javax.persistence.*;
 
 /**
  * @author <a href="http://github.com/asyrafduyshart">Asyraf Duyshart</a>
@@ -33,7 +22,7 @@ import javax.persistence.*;
  */
 @Entity
 @EntityListeners(PersistentListener.class)
-@Table(name = "users")
+@Table(name = "User")
 @Data
 @Builder
 @NoArgsConstructor
@@ -56,21 +45,10 @@ public class UserPO {
 	@Column(updatable = false)
 	private long id;
 
+	@Column(nullable = false)
 	private String account;
-
-	@Column(updatable = false)
-	private long createdAt;
-
-	@Column(nullable = false, updatable = false)
-	private long createdBy;
-
-	@Column(nullable = false)
-	private long lastModifiedAt;
-
-	@Column(nullable = false)
-	private long lastModifiedBy;
-
-	@Version
-	@Column(nullable = false)
-	private int version;
+	private String email;
+	private String password;
+	private String lastName;
+	private String firstName;
 }

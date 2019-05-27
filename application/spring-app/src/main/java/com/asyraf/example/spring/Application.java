@@ -1,8 +1,6 @@
 package com.asyraf.example.spring;
 
-import com.asyraf.config.SpringConfig;
-
-import com.asyraf.example.db.psql.PSQLServiceConfiguration;
+import com.asyraf.example.db.psql.configuration.PSQLConfiguration;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration;
@@ -20,10 +18,11 @@ import org.springframework.scheduling.annotation.EnableAsync;
 @Import({
 	JacksonAutoConfiguration.class,
 	PropertySourcesPlaceholderConfigurer.class,
+	PSQLConfiguration.class,
 	ThymeleafAutoConfiguration.class})
 public class Application {
 	public static void main(String[] args) {
-//		System.out.println("=========================" + getClassResource(PSQLServiceConfiguration.class));
+		System.out.println("=========================" + getClassResource(PSQLConfiguration.class));
 		SpringApplication.run(Application.class, args);
 	}
 

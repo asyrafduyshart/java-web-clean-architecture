@@ -1,8 +1,6 @@
 package com.asyraf.example.db.psql.listener;
 
 import javax.persistence.PrePersist;
-import java.lang.reflect.InvocationTargetException;
-import java.util.Objects;
 
 /**
  * @author <a href="http://github.com/asyrafduyshart">Asyraf Duyshart</a>

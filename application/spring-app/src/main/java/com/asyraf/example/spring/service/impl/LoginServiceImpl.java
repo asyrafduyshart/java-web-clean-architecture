@@ -1,6 +1,7 @@
 package com.asyraf.example.spring.service.impl;
 
 import com.asyraf.example.controller.UserController;
+import com.asyraf.example.db.psql.domain.UserDomain;
 import com.asyraf.example.spring.service.LoginService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -19,11 +20,13 @@ public class LoginServiceImpl implements LoginService {
 	private final UserController controller;
 
 	@Override public ResponseEntity login() throws Exception {
+
 		return new ResponseEntity<>(controller.allUsers(), HttpStatus.OK);
 	}
 
 	@Autowired
-	public LoginServiceImpl(final UserController controller) {
+	public LoginServiceImpl(final UserController controller, UserDomain userDomain) {
 		this.controller = controller;
+
 	}
 }

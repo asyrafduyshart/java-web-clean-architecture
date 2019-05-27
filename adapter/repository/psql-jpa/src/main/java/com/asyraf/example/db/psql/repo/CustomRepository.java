@@ -10,7 +10,7 @@ import org.springframework.data.repository.NoRepositoryBean;
  * @date 5/26/2019
  * @since JDK1.8
  */
-@NoRepositoryBean
-interface CustomRepository<T, ID extends Serializable>
+@NoRepositoryBean public interface CustomRepository<T, ID extends Serializable>
 	extends JpaSpecificationExecutor<T>, JpaRepository<T, ID> {
+
 }

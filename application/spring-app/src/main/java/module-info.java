@@ -2,6 +2,8 @@ module asyraf.example.spring {
 	requires asyraf.example.config;
 	requires asyraf.example.usecase;
 	requires asyraf.example.controller;
+	requires asyraf.example.domain;
+	requires asyraf.example.db.psql;
 	requires spring.web;
 	requires spring.beans;
 
@@ -23,7 +25,6 @@ module asyraf.example.spring {
 	requires spring.data.redis;
 	requires spring.security.core;
 	requires spring.security.web;
-	requires asyraf.example.db.psql;
 
 	exports com.asyraf.example.spring;
 	exports com.asyraf.example.spring.config;
