@@ -1,9 +1,10 @@
 module asyraf.example.db.psql {
 	exports com.asyraf.example.db.psql.component;
 	exports com.asyraf.example.db.psql.configuration;
-	exports com.asyraf.example.db.psql.domain;
+
 	exports com.asyraf.example.db.psql.repo;
 	exports com.asyraf.example.db.psql.po;
+	exports com.asyraf.example.db.psql.domain;
 
 	requires asyraf.example.domain;
 	requires asyraf.example.usecase;

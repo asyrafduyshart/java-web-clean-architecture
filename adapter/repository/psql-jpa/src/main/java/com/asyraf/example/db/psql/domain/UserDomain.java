@@ -3,7 +3,10 @@ package com.asyraf.example.db.psql.domain;
 import com.asyraf.example.db.psql.component.Transformer;
 import com.asyraf.example.db.psql.po.UserPO;
 import com.asyraf.example.db.psql.repo.CustomRepository;
+import com.asyraf.example.db.psql.repo.UserRepository;
 import com.asyraf.example.domain.entity.User;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.NoRepositoryBean;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -16,8 +19,10 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Service
 @Transactional(readOnly = true)
-public class UserDomain extends BaseDomain<User, Long> {
-	public UserDomain(CustomRepository<User, Long> repository, Transformer transformer) {
+public class UserDomain extends BaseDomain<UserPO, Long> {
+
+
+	public UserDomain(CustomRepository<UserPO, Long> repository, Transformer transformer) {
 		super(repository, transformer);
 	}
 
