@@ -63,9 +63,9 @@ spring:
 # And use the mysql dependency in the 'build.gradle'.
 # Set here configurations for the database connection
   datasource:
-    url: jdbc:postgresql://localhost/core?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&zeroDateTimeBehavior=convertToNull
-    username: core
-    password: core
+    url: jdbc:postgresql://localhost/postgres?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&createDatabaseIfNotExist=true
+    username: postgres
+    password: test
     hikari:
       connection-test-query: SELECT 1
 # Keep the connection alive if idle for a long time (needed in production)

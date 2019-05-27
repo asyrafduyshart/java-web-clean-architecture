@@ -22,7 +22,7 @@ import lombok.NoArgsConstructor;
  */
 @Entity
 @EntityListeners(PersistentListener.class)
-@Table(name = "User")
+@Table(name = "users")
 @Data
 @Builder
 @NoArgsConstructor
@@ -45,7 +45,7 @@ public class UserPO {
 	@Column(updatable = false)
 	private long id;
 
-	@Column(nullable = false)
+	@Column
 	private String account;
 	private String email;
 	private String password;
